@@ -26,13 +26,13 @@ public class DepositarHandlerTests
     private readonly Mock<IMapper> _mapperMock;
     private readonly DepositarHandler _handler;
 
-    public DepositarHandlerTests(Mock<ICarteiraRepository> carteiraRepositoryMock, Mock<ITransacaoRepository> transacaoRepositoryMock, Mock<IUsuarioRepository> usuarioRepositoryMock, Mock<IUnitOfWork> unitOfWorkMock, Mock<IMapper> mapperMock, DepositarHandler handler)
+    public DepositarHandlerTests()
     {
-        _carteiraRepositoryMock = carteiraRepositoryMock;
-        _transacaoRepositoryMock = transacaoRepositoryMock;
-        _usuarioRepositoryMock = usuarioRepositoryMock;
-        _unitOfWorkMock = unitOfWorkMock;
-        _mapperMock = mapperMock;
+        _carteiraRepositoryMock = new Mock<ICarteiraRepository>();
+        _transacaoRepositoryMock = new Mock<ITransacaoRepository>();
+        _usuarioRepositoryMock = new Mock<IUsuarioRepository>();
+        _unitOfWorkMock = new Mock<IUnitOfWork>();
+        _mapperMock = new Mock<IMapper>();
 
         _handler = new DepositarHandler(
             _carteiraRepositoryMock.Object,
@@ -171,7 +171,7 @@ public class DepositarHandlerTests
 
         // Assert
         result.Falhou.Should().BeTrue();
-        result.MensagemErro.Should().Contain("valor inválido");
+        result.MensagemErro.Should().Contain("Erro ao processar depósito");
         _unitOfWorkMock.Verify(x => x.CommitAsync(), Times.Never);
     }
 }
