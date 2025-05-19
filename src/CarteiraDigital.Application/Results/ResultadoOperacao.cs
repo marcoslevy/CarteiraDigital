@@ -1,6 +1,4 @@
-﻿using CarteiraDigital.Core.Entities.Transacoes;
-
-namespace CarteiraDigital.Core.Results;
+﻿namespace CarteiraDigital.Core.Results;
 
 public class ResultadoOperacao<T> where T : class
 {
