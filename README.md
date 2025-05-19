@@ -4,7 +4,7 @@ Certifique-se de que o .NET 8 está instalado em sua máquina.
 
 ### Este projeto utiliza container Docker para rodar as dependências necessárias. Abaixo estão os passos para configurar e executar a aplicação.
 
-## Containers Necessários
+## 
 
 ### 1. Postgress
 
