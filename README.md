@@ -29,12 +29,12 @@ Ao registra um Usuário o mesmo será vinculado a uma Carteira.
 
 Copie o token gerado.
 
-### 4. Configurar Autorização na Vendas.API
-Acesse a API de vendas configure o token de autorização:
-  * URL: https://localhost:7226/swagger/index.html
+### 4. Configurar Autorização
+Acesse a API e configure o token de autorização:
+  * URL: https://localhost:7131/swagger/index.html
   * No Swagger, clique no botão "Authorize" e cole o token gerado.
 
-### 4. Realizar Movimentaçoes na carteira do usuario
+### 5. Realizar Movimentaçoes na carteira do usuario
 
   1. Saldo da Carteira:
       * Método: GET /api/Carteira/saldo
